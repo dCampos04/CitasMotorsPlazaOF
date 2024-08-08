@@ -2,7 +2,7 @@ import {ApplicationConfig, importProvidersFrom, provideZoneChangeDetection} from
 import {provideRouter, withViewTransitions} from '@angular/router';
 
 import { routes } from './app.routes';
-import {HttpClientModule} from "@angular/common/http";
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,10 +16,7 @@ export const appConfig: ApplicationConfig = {
         // },
       }),
     ),
-
-    importProvidersFrom(
-      HttpClientModule,
-    )
+    provideHttpClient(),
 
   ]
 };

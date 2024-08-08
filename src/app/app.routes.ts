@@ -61,7 +61,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: '/home/login',
     pathMatch: 'full'
   }
 ];
